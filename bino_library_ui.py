@@ -1,4 +1,4 @@
-def menu():
+def menu() -> None:
     print("===============================")
     print("Welcome to the Bino Library")
     print("1. P(x > a)")
@@ -9,7 +9,7 @@ def menu():
     print("===============================")
     choice = get_user_choice(5)
 
-def get_user_choice(number_of_choices):
+def get_user_choice(number_of_choices: int) -> int:
     while True:
         choice = input(f"Enter your choice (1-{number_of_choices}): ")
         if choice <= 0 or choice > number_of_choices:
