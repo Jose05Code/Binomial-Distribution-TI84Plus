@@ -49,29 +49,34 @@ def get_parameters() -> tuple:
 def probability_greater_than() -> None:
     """Calculate the probability P(x > a)."""
     print("Calculating P(x > a)...")
+    n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
 def probability_greater_equal() -> None:
     """Calculate the probability P(x >= a)."""
     print("Calculating P(x >= a)...")
+    n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
 def probability_less_than() -> None:
     """Calculate the probability P(x < a)."""
     print("Calculating P(x < a)...")
+    n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
 def probability_less_equal() -> None:
     """Calculate the probability P(x <= a)."""
     print("Calculating P(x <= a)...")
+    n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
 def probability_equal() -> None:
     """Calculate the probability P(x = a)."""
     print("Calculating P(x = a)...")
+    n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
