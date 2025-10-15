@@ -12,8 +12,8 @@ def get_user_choice(number_of_choices):
     while True:
         prompt = "\nEnter your choice (1-{}): ".format(number_of_choices)
         choice = int(input(prompt))
-        if choice < 0 or choice > number_of_choices:
-            print("\nInvalid choice. Please enter a number between 0 and {}.".format(number_of_choices))
+        if choice < 1 or choice > number_of_choices:
+            print("\nInvalid choice. Please enter a number between 1 and {}.".format(number_of_choices))
         else:
             return choice
         
