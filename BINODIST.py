@@ -1,4 +1,4 @@
-import bino_library_ui as ui
+import LIB_BIN as ui
 
 def main():
     switcher = {
@@ -7,15 +7,12 @@ def main():
         3: ui.probability_less_than,
         4: ui.probability_less_equal,
         5: ui.probability_equal,
-        0: exit
     }
-    max_option = max(k for k in switcher.keys() if k != 0)
+    max_option = max(switcher.keys())
     while True:
         ui.menu()
         choice = ui.get_user_choice(max_option)
         func = switcher.get(choice)
         func()
 
-
-if __name__ == "__main__":
-    main()
+main()
