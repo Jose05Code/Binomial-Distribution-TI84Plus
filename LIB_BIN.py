@@ -1,4 +1,4 @@
-def menu() -> None:
+def menu():
     print("===============================")
     print("Welcome to the Bino Library")
     print("1. P(x > a)")
@@ -9,7 +9,7 @@ def menu() -> None:
     print("0. Exit")
     print("===============================")
 
-def get_user_choice(number_of_choices: int) -> int:
+def get_user_choice(number_of_choices):
     while True:
         choice = int(input(f"Enter your choice (0-{number_of_choices}): "))
         if choice < 0 or choice > number_of_choices:
@@ -17,7 +17,7 @@ def get_user_choice(number_of_choices: int) -> int:
         else:
             return choice
         
-def get_parameters() -> tuple[int, float, int]:
+def get_parameters():
     while True:
         try:
             n = int(input("Enter the number of trials (n >= 0): "))
@@ -52,31 +52,31 @@ def get_parameters() -> tuple[int, float, int]:
 # Probability calculation functions
 #===================================
 
-def probability_greater_than() -> None:
+def probability_greater_than():
     print("Calculating P(x > a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
-def probability_greater_equal() -> None:
+def probability_greater_equal():
     print("Calculating P(x >= a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
-def probability_less_than() -> None:
+def probability_less_than():
     print("Calculating P(x < a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
-def probability_less_equal() -> None:
+def probability_less_equal():
     print("Calculating P(x <= a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
     pass
 
-def probability_equal() -> None:
+def probability_equal():
     print("Calculating P(x = a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
