@@ -14,12 +14,12 @@ def menu() -> None:
 def get_user_choice(number_of_choices: int) -> int:
     """
     Get a valid user choice from the menu.
-    
+
     Args:
-        number_of_choices (int): The number of valid choices available.
+        number_of_choices (int): The maximum valid menu option value (inclusive). Valid choices are integers from 0 to number_of_choices, inclusive.
 
     Returns:
-        int: The user's valid choice.
+        int: The user's valid choice (between 0 and number_of_choices, inclusive).
     """
 
     while True:
