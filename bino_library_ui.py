@@ -23,7 +23,7 @@ def get_user_choice(number_of_choices: int) -> int:
     """
 
     while True:
-        choice = int(input(f"Enter your choice (1-{number_of_choices}): "))
+        choice = int(input(f"Enter your choice (0-{number_of_choices}): "))
         if choice < 0 or choice > number_of_choices:
             print(f"Invalid choice. Please enter a number between 0 and {number_of_choices}.")
         else:
