@@ -29,7 +29,7 @@ def get_user_choice(number_of_choices: int) -> int:
         else:
             return choice
         
-def get_parameters() -> tuple:
+def get_parameters() -> tuple[int, float, int]:
     """
     Prompt the user for parameters n, p, and a.
 
