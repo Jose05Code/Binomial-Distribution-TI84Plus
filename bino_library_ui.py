@@ -8,6 +8,7 @@ def menu() -> None:
     print("3. P(x < a)")
     print("4. P(x <= a)")
     print("5. P(x = a)")
+    print("0. Exit")
     print("===============================")
 
 def get_user_choice(number_of_choices: int) -> int:
@@ -23,8 +24,8 @@ def get_user_choice(number_of_choices: int) -> int:
 
     while True:
         choice = int(input(f"Enter your choice (1-{number_of_choices}): "))
-        if choice <= 0 or choice > number_of_choices:
-            print(f"Invalid choice. Please enter a number between 1 and {number_of_choices}.")
+        if choice < 0 or choice > number_of_choices:
+            print(f"Invalid choice. Please enter a number between 0 and {number_of_choices}.")
         else:
             return choice
         
