@@ -56,8 +56,6 @@ def probability_greater_than():
     print("\nCalculating P(x > a)...")
     n, p, a = get_parameters()
     # Placeholder for actual calculation logic
-
-
     pass
 
 def probability_greater_equal():
