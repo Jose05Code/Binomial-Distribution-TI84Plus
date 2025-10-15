@@ -7,7 +7,6 @@ def main():
         3: ui.probability_less_than,
         4: ui.probability_less_equal,
         5: ui.probability_equal,
-        0: exit
     }
     max_option = max(k for k in switcher.keys() if k != 0)
     while True:
@@ -16,6 +15,4 @@ def main():
         func = switcher.get(choice)
         func()
 
-
-if __name__ == "__main__":
-    main()
+main()
