@@ -9,7 +9,8 @@ def main():
             2: ui.probability_greater_equal,
             3: ui.probability_less_than,
             4: ui.probability_less_equal,
-            5: ui.probability_equal
+            5: ui.probability_equal,
+            0: exit
         }
         func = switcher.get(choice)
         func()
