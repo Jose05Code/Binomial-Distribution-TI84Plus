@@ -47,10 +47,10 @@ def get_parameters() -> tuple:
 #===================================
 
 def probability_greater_than() -> None:
-     """Calculate the probability P(x > a)."""
-print("Calculating P(x > a)...")
-# Placeholder for actual calculation logic
-pass
+    """Calculate the probability P(x > a)."""
+    print("Calculating P(x > a)...")
+    # Placeholder for actual calculation logic
+    pass
 
 def probability_greater_equal() -> None:
     """Calculate the probability P(x >= a)."""
