@@ -11,9 +11,10 @@ def menu():
 
 def get_user_choice(number_of_choices):
     while True:
-        choice = int(input(f"Enter your choice (0-{number_of_choices}): "))
+        prompt = "Enter your choice (0-{}): ".format(number_of_choices)
+        choice = int(input(prompt))
         if choice < 0 or choice > number_of_choices:
-            print(f"Invalid choice. Please enter a number between 0 and {number_of_choices}.")
+            print("Invalid choice. Please enter a number between 0 and {}.".format(number_of_choices))
         else:
             return choice
         
