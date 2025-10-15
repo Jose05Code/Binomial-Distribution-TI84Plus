@@ -28,12 +28,29 @@ def get_user_choice(number_of_choices: int) -> int:
             print(f"Invalid choice. Please enter a number between 1 and {number_of_choices}.")
         else:
             return choice
+        
+def get_parameters() -> tuple:
+    """
+    Prompt the user for parameters n, p, and a.
+
+    Returns:
+        tuple: A tuple containing (n, p, a).
+    """
+    n = int(input("Enter the number of trials (n): "))
+    p = float(input("Enter the probability of success in decimal (p): "))
+    a = int(input("Enter the value of a: "))
+    return n, p, a
+
+
+#===================================
+# Probability calculation functions
+#===================================
 
 def probability_greater_than() -> None:
-    """Calculate the probability P(x > a)."""
-    print("Calculating P(x > a)...")
-    # Placeholder for actual calculation logic
-    pass
+     """Calculate the probability P(x > a)."""
+print("Calculating P(x > a)...")
+# Placeholder for actual calculation logic
+pass
 
 def probability_greater_equal() -> None:
     """Calculate the probability P(x >= a)."""
