@@ -36,9 +36,33 @@ def get_parameters() -> tuple[int, float, int]:
     Returns:
         tuple: A tuple containing (n, p, a).
     """
-    n = int(input("Enter the number of trials (n): "))
-    p = float(input("Enter the probability of success in decimal (p): "))
-    a = int(input("Enter the value of a: "))
+    while True:
+        try:
+            n = int(input("Enter the number of trials (n >= 0): "))
+            if n < 0:
+                print("Number of trials must be a non-negative integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a non-negative integer for n.")
+    while True:
+        try:
+            p = float(input("Enter the probability of success in decimal (0 <= p <= 1): "))
+            if p < 0 or p > 1:
+                print("Probability must be between 0 and 1 (inclusive).")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a decimal number between 0 and 1 for p.")
+    while True:
+        try:
+            a = int(input("Enter the value of a (a >= 0): "))
+            if a < 0:
+                print("Value of a must be a non-negative integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a non-negative integer for a.")
     return n, p, a
 
 
