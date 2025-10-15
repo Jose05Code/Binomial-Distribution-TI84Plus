@@ -17,3 +17,27 @@ def get_user_choice(number_of_choices):
         else:
             return choice
 
+def probability_greater_than(choice: int) -> None:
+    print("Calculating P(x > a)...")
+    # Placeholder for actual calculation logic
+    pass
+
+def probability_greater_equal(choice: int) -> None:
+    print("Calculating P(x >= a)...")
+    # Placeholder for actual calculation logic
+    pass
+
+def probability_less_than(choice: int) -> None:
+    print("Calculating P(x < a)...")
+    # Placeholder for actual calculation logic
+    pass
+
+def probability_less_equal(choice: int) -> None:
+    print("Calculating P(x <= a)...")
+    # Placeholder for actual calculation logic
+    pass
+
+def probability_equal(choice: int) -> None:
+    print("Calculating P(x = a)...")
+    # Placeholder for actual calculation logic
+    pass
