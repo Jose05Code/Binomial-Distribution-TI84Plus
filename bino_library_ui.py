@@ -1,4 +1,6 @@
 def menu() -> None:
+    """Display the main menu to the user."""
+
     print("===============================")
     print("Welcome to the Bino Library")
     print("1. P(x > a)")
@@ -10,6 +12,16 @@ def menu() -> None:
     choice = get_user_choice(5)
 
 def get_user_choice(number_of_choices: int) -> int:
+    """
+    Get a valid user choice from the menu.
+    
+    Args:
+        number_of_choices (int): The number of valid choices available.
+
+    Returns:
+        int: The user's valid choice.
+    """
+
     while True:
         choice = input(f"Enter your choice (1-{number_of_choices}): ")
         if choice <= 0 or choice > number_of_choices:
@@ -17,27 +29,32 @@ def get_user_choice(number_of_choices: int) -> int:
         else:
             return choice
 
-def probability_greater_than(choice: int) -> None:
+def probability_greater_than() -> None:
+    """Calculate the probability P(x > a)."""
     print("Calculating P(x > a)...")
     # Placeholder for actual calculation logic
     pass
 
-def probability_greater_equal(choice: int) -> None:
+def probability_greater_equal() -> None:
+    """Calculate the probability P(x >= a)."""
     print("Calculating P(x >= a)...")
     # Placeholder for actual calculation logic
     pass
 
-def probability_less_than(choice: int) -> None:
+def probability_less_than() -> None:
+    """Calculate the probability P(x < a)."""
     print("Calculating P(x < a)...")
     # Placeholder for actual calculation logic
     pass
 
-def probability_less_equal(choice: int) -> None:
+def probability_less_equal() -> None:
+    """Calculate the probability P(x <= a)."""
     print("Calculating P(x <= a)...")
     # Placeholder for actual calculation logic
     pass
 
-def probability_equal(choice: int) -> None:
+def probability_equal() -> None:
+    """Calculate the probability P(x = a)."""
     print("Calculating P(x = a)...")
     # Placeholder for actual calculation logic
     pass
