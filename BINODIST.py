@@ -1,4 +1,4 @@
-import bino_library_ui as ui
+import LIB_BIN as ui
 
 def main():
     switcher = {
