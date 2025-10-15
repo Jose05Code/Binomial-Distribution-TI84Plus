@@ -8,7 +8,7 @@ def main():
         4: ui.probability_less_equal,
         5: ui.probability_equal,
     }
-    max_option = max(k for k in switcher.keys() if k != 0)
+    max_option = max(switcher.keys())
     while True:
         ui.menu()
         choice = ui.get_user_choice(max_option)
