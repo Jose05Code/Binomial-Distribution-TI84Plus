@@ -1,10 +1,9 @@
+import math
+
 def nCr(n, a):
-    if a == 0:
-        return 1
-    if n == a:
-        return 1
-    
-    return nCr(n-1, a-1) + nCr(n-1, a)
+    if a < 0 or a > n:
+        return 0
+    return math.factorial(n) // (math.factorial(a) * math.factorial(n - a))
 
 def binopdf(n, p, a):
     return nCr(n, a)*(p**a)*(1-p)**(n-a)
