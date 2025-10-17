@@ -13,6 +13,6 @@ def main():
         ui.menu()
         choice = ui.get_user_choice(max_option)
         func = switcher.get(choice)
-        func()
+        ui.print_answer(func())
 
 main()

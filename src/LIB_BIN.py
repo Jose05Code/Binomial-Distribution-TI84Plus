@@ -1,4 +1,7 @@
+import LIB_MATH as math
+
 def menu():
+    clear()
     print("\n===============================")
     print("Welcome to the Bino Library")
     print("1. P(x > a)")
@@ -16,6 +19,15 @@ def get_user_choice(number_of_choices):
             print("\nInvalid choice. Please enter a number between 1 and {}.".format(number_of_choices))
         else:
             return choice
+        
+def clear():
+    for i in range(20):
+        print("")
+        
+def print_answer(answer):
+    clear()
+    print("The answer is: ", answer)
+    input("Push enter to continue.")
         
 def get_parameters():
     while True:
@@ -55,29 +67,24 @@ def get_parameters():
 def probability_greater_than():
     print("\nCalculating P(x > a)...")
     n, p, a = get_parameters()
-    # Placeholder for actual calculation logic
-    pass
+    return 1-math.binocdf(n,p,a)
 
 def probability_greater_equal():
     print("\nCalculating P(x >= a)...")
     n, p, a = get_parameters()
-    # Placeholder for actual calculation logic
-    pass
+    return 1-math.binocdf(n,p,a-1)
 
 def probability_less_than():
     print("\nCalculating P(x < a)...")
     n, p, a = get_parameters()
-    # Placeholder for actual calculation logic
-    pass
+    return math.binocdf(n,p,a-1)
 
 def probability_less_equal():
     print("\nCalculating P(x <= a)...")
     n, p, a = get_parameters()
-    # Placeholder for actual calculation logic
-    pass
+    return math.binocdf(n,p,a)
 
 def probability_equal():
     print("\nCalculating P(x = a)...")
     n, p, a = get_parameters()
-    # Placeholder for actual calculation logic
-    pass
+    return math.binopdf(n,p,a)
