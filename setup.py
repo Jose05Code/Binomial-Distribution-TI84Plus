@@ -36,8 +36,6 @@ if __name__ == '__main__':
           'Intended Audience :: Developers',
           'Intended Audience :: Education',
           'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
