@@ -1,6 +1,7 @@
 import LIB_MATH as math
 
 def menu():
+    clear()
     print("\n===============================")
     print("Welcome to the Bino Library")
     print("1. P(x > a)")
@@ -19,7 +20,12 @@ def get_user_choice(number_of_choices):
         else:
             return choice
         
+def clear():
+    for i in range(20):
+        print("")
+        
 def print_answer(answer):
+    clear()
     print("The answer is: ", answer)
     input("Push enter to continue.")
         
