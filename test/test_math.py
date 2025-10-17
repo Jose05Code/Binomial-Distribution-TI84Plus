@@ -10,3 +10,9 @@ def test_binopdf():
     p = 0.5
     a = 6
     assert math.binopdf(n, p, a) == 0.205078125
+
+def test_binocdf():
+    n = 10
+    p = 0.5
+    a = 6
+    assert math.binocdf(n, p, a) == 0.828125
