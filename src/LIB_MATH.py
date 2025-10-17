@@ -8,3 +8,9 @@ def nCr(n, a):
 
 def binopdf(n, p, a):
     return nCr(n, a)*(p**a)*(1-p)**(n-a)
+
+def binocdf(n, p, a):
+    cdf = 0
+    for i in range(a+1):
+        cdf += binopdf(n,p,i)
+    return cdf
