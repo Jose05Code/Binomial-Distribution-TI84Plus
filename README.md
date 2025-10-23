@@ -19,61 +19,6 @@ The calculator uses the binomial probability mass function (PDF) and cumulative 
 <!-- Placeholder for screenshot -->
 *Screenshot of the application will be added here*
 
-## Installation
-
-### Prerequisites
-
-- Python 3.6 or higher
-- pip (Python package installer)
-
-### Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Jose05Code/Binomial-Distribution-TI84Plus.git
-   cd Binomial-Distribution-TI84Plus
-   ```
-
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Install the package in editable mode (optional, for development):
-   ```bash
-   pip install -e .
-   ```
-
-### Docker Installation (Alternative)
-
-If you prefer using Docker:
-
-1. Build and run using Docker Compose:
-   ```bash
-   docker-compose up --build
-   ```
-
-This will run the test suite automatically.
-
-## Usage
-
-### Running the Calculator
-
-To start the interactive binomial distribution calculator:
-
-```bash
-python src/BINODIST.py
-```
-
-### Using the Calculator
-
-1. When the program starts, you'll see a menu with 5 options
-2. Enter your choice (1-5) based on which probability you want to calculate
-3. Provide the following parameters when prompted:
-   - **n** (number of trials): A non-negative integer representing the total number of trials
-   - **p** (probability of success): A decimal number between 0 and 1 representing the probability of success on a single trial
-   - **a** (value): A non-negative integer representing the value you're interested in
-
 ### Example
 
 Let's calculate P(x = 3) for a binomial distribution with n=10 trials and p=0.5 probability:
@@ -102,82 +47,29 @@ The answer is:  0.1171875
 Push enter to continue.
 ```
 
-### Using the Library in Your Code
+## How Install
 
-You can also use the mathematical functions directly in your Python code:
+This project is intended to run on a TI‑84 Plus CE (Python edition). To transfer a program to your calculator, use TI Connect™ CE (Windows or macOS) and follow the steps below.
 
-```python
-import src.LIB_MATH as math
+Prepare the program file
 
-# Calculate binomial PDF: P(X = k)
-probability = math.binopdf(n=10, p=0.5, a=3)
-print(f"P(X = 3) = {probability}")
+- Download the release for the calculator from the project's Releases page (the release for the calculator contains only the files intended for the TI‑84 Plus CE).
+- If you downloaded a release archive, extract it. If the release contains multiple files, the file you should open in the calculator is `BINODIST.py`.
 
-# Calculate binomial CDF: P(X <= k)
-cumulative = math.binocdf(n=10, p=0.5, a=3)
-print(f"P(X <= 3) = {cumulative}")
+Transfer with TI Connect CE (Windows / macOS)
 
-# Calculate combinations: nCr
-combinations = math.nCr(n=10, a=3)
-print(f"10C3 = {combinations}")
-```
+1. Install TI Connect CE from Texas Instruments: https://education.ti.com/en/products/computer-software/ti-connect-ce-sw
+2. Connect your TI‑84 Plus CE to your computer with the USB cable.
+3. Open TI Connect CE and open Device Explorer.
+4. In Device Explorer, open the calculator's Python folder.
+5. Drag-and-drop your `.py` file into the Python folder (or use "Send to Device").
+6. On the calculator open the Python app, find the program and run it.
 
-## Running Tests
+Notes for Linux users
 
-The project includes unit tests for the mathematical functions. To run the tests:
-
-```bash
-pytest test/test_math.py -v
-```
-
-Or using Docker:
-
-```bash
-docker-compose up
-```
-
-## Transferring to TI-84 Plus
-
-**Note:** This is a Python implementation and runs on computers, not directly on TI-84 Plus calculators. However, it provides the same binomial distribution calculations that are available on TI-84 Plus calculators.
-
-If you want to use binomial distribution functions on an actual TI-84 Plus calculator:
-- Use the built-in `binompdf()` and `binomcdf()` functions
-- Access them via: `2nd` → `VARS` (DISTR) → `binompdf()` or `binomcdf()`
-
-This Python tool can be used for:
-- Learning and understanding binomial distributions
-- Checking your TI-84 Plus calculator results
-- Performing calculations when a physical calculator is not available
-- Batch processing multiple calculations
-
-## Project Structure
-
-```
-Binomial-Distribution-TI84Plus/
-├── src/
-│   ├── BINODIST.py      # Main program with interactive menu
-│   ├── LIB_BIN.py       # User interface and probability calculation functions
-│   ├── LIB_MATH.py      # Core mathematical functions (nCr, binopdf, binocdf)
-│   └── __init__.py      # Package initialization
-├── test/
-│   └── test_math.py     # Unit tests for mathematical functions
-├── requirements.txt     # Python dependencies
-├── setup.py            # Package setup configuration
-├── dockerfile          # Docker configuration
-├── docker-compose.yaml # Docker Compose configuration
-└── README.md          # This file
-```
-
-## License
-
-This project is licensed under the MIT License as specified in setup.py.
-
-The MIT License allows you to:
-- Use the software for any purpose
-- Modify the software
-- Distribute the software
-- Use the software privately
-- Sell copies of the software
+- TI Connect CE doesn't have a native Linux version. Options:
+	- Run TI Connect CE under WINE or in a Windows VM and use Device Explorer there.
+	- Transfer the file from a Windows or macOS machine that has TI Connect CE installed.
 
 ## Contributing
 
@@ -200,6 +92,26 @@ If you find a bug or have a suggestion:
 7. Push to your branch (`git push origin feature/YourFeature`)
 8. Open a Pull Request with a clear description of your changes
 
+
+### Project Structure
+
+```
+Binomial-Distribution-TI84Plus/
+├── src/
+│   ├── BINODIST.py      # Main program with interactive menu
+│   ├── LIB_BIN.py       # User interface and probability calculation functions
+│   ├── LIB_MATH.py      # Core mathematical functions (nCr, binopdf, binocdf)
+│   └── __init__.py      # Package initialization
+├── test/
+│   └── test_math.py     # Unit tests for mathematical functions
+├── requirements.txt     # Python dependencies
+├── setup.py            # Package setup configuration
+├── dockerfile          # Docker configuration
+├── docker-compose.yaml # Docker Compose configuration
+└── README.md          # This file
+```
+
+
 ### Coding Standards
 
 - Follow PEP 8 style guidelines for Python code
@@ -207,14 +119,5 @@ If you find a bug or have a suggestion:
 - Add tests for new functionality
 - Update documentation as needed
 
-## Contact
 
-- **Author:** Jose
-- **Repository:** [Jose05Code/Binomial-Distribution-TI84Plus](https://github.com/Jose05Code/Binomial-Distribution-TI84Plus)
-
-For questions or support, please open an issue on GitHub.
-
-## Acknowledgments
-
-- Inspired by the binomial distribution functions available on TI-84 Plus calculators
-- Built for educational purposes to help students and professionals understand binomial distributions
+### For questions or support, please open an issue on GitHub.
