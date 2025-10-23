@@ -1,5 +1,8 @@
 # Binomial Distribution TI-84 Plus
 
+<middle><img width="244" height="184" alt="Capture5-1760557063143" src="https://github.com/user-attachments/assets/c3b63487-9b66-434a-a2df-f48de3aa149f" /></middle>
+
+
 A Python-based binomial distribution calculator that mimics the functionality of TI-84 Plus calculators. This tool provides an interactive command-line interface for calculating various binomial distribution probabilities.
 
 ## Overview
@@ -13,11 +16,6 @@ This project implements binomial distribution calculations commonly found in TI-
 - P(x = a) - Probability that x equals a
 
 The calculator uses the binomial probability mass function (PDF) and cumulative distribution function (CDF) to compute these probabilities based on user-provided parameters (number of trials, probability of success, and value of interest).
-
-## Screenshot
-
-<!-- Placeholder for screenshot -->
-*Screenshot of the application will be added here*
 
 ### Example
 
