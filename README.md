@@ -1,7 +1,6 @@
 # Binomial Distribution TI-84 Plus
 
-<middle><img width="244" height="184" alt="Capture5-1760557063143" src="https://github.com/user-attachments/assets/c3b63487-9b66-434a-a2df-f48de3aa149f" /></middle>
-
+<img width="244" height="184" alt="Capture5-1760557063143" src="https://github.com/user-attachments/assets/c3b63487-9b66-434a-a2df-f48de3aa149f" />
 
 A Python-based binomial distribution calculator that mimics the functionality of TI-84 Plus calculators. This tool provides an interactive command-line interface for calculating various binomial distribution probabilities.
 
