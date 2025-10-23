@@ -107,7 +107,7 @@ Push enter to continue.
 You can also use the mathematical functions directly in your Python code:
 
 ```python
-from src import LIB_MATH as math
+import src.LIB_MATH as math
 
 # Calculate binomial PDF: P(X = k)
 probability = math.binopdf(n=10, p=0.5, a=3)
@@ -170,7 +170,7 @@ Binomial-Distribution-TI84Plus/
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License as specified in setup.py.
 
 The MIT License allows you to:
 - Use the software for any purpose
