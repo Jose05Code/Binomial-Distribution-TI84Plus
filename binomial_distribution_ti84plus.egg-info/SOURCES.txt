@@ -1,0 +1,10 @@
+setup.py
+binomial_distribution_ti84plus.egg-info/PKG-INFO
+binomial_distribution_ti84plus.egg-info/SOURCES.txt
+binomial_distribution_ti84plus.egg-info/dependency_links.txt
+binomial_distribution_ti84plus.egg-info/top_level.txt
+src/BINODIST.py
+src/LIB_BIN.py
+src/LIB_MATH.py
+src/__init__.py
+test/test_math.py
