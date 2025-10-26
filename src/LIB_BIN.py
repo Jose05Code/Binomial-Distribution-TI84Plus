@@ -28,35 +28,40 @@ def print_answer(answer):
     clear()
     print("The answer is: ", answer)
     input("Push enter to continue.")
-        
+
+def get_values(value_type, text, condition, error_message, expect_error):
+    while True:
+        try:
+            value = value_type(input(text))
+            if not condition(value):
+                print(error_message)
+                continue
+            return value
+        except ValueError:
+            print(f"\n{expect_error}")
+
 def get_parameters():
-    while True:
-        try:
-            n = int(input("\nEnter the number of trials (n >= 0): "))
-            if n < 0:
-                print("\nNumber of trials must be a non-negative integer.")
-                continue
-            break
-        except ValueError:
-            print("\nInvalid input. Please enter a non-negative integer for n.")
-    while True:
-        try:
-            p = float(input("\nEnter the probability of success in decimal (0 <= p <= 1): "))
-            if p < 0 or p > 1:
-                print("\nProbability must be between 0 and 1 (inclusive).")
-                continue
-            break
-        except ValueError:
-            print("\nInvalid input. Please enter a decimal number between 0 and 1 for p.")
-    while True:
-        try:
-            a = int(input("\nEnter the value of a (a >= 0): "))
-            if a < 0:
-                print("\nValue of a must be a non-negative integer.")
-                continue
-            break
-        except ValueError:
-            print("\nInvalid input. Please enter a non-negative integer for a.")
+    n = get_values(
+        int,
+        "\nEnter the number of trials (n >= 0): ",
+        lambda x: x >= 0,
+        "\nNumber of trials must be a non-negative integer.",
+        "\nInvalid input. Please enter a non-negative integer for n."
+    )
+    p = get_values(
+        float,
+        "\nEnter the probability of success in decimal (0 <= p <= 1): ",
+        lambda x: 0 <= x <= 1,
+        "\nProbability must be between 0 and 1 (inclusive).",
+        "\nInvalid input. Please enter a decimal number between 0 and 1 for p."
+    )
+    a = get_values(
+        int,
+        "\nEnter the value of a (a >= 0): ",
+        lambda x: x >= 0,
+        "\nValue of a must be a non-negative integer.",
+        "\nInvalid input. Please enter a non-negative integer for a."
+    )
     return n, p, a
 
 
