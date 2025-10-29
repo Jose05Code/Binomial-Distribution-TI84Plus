@@ -1,5 +1,9 @@
 from src import LIB_MATH as math
 
+def test_factorial():
+    n = 5
+    assert math.factorial(5) == 120
+
 def test_nCr():
     n = 20
     r = 4
